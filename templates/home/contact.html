@@ -1,0 +1,89 @@
+{% extends 'home/base.html' %}
+{% block title %}Marks{% endblock %}
+
+{% block body %}
+<div class="container my-5">
+    {% comment %} go to chat gpt to find the old code {% endcomment %}
+
+  <h1 class="text-center mb-5">📚 Upload your Marks</h1>
+
+  <form method="post" action="/contact" class="p-4 shadow rounded bg-light">
+    {% csrf_token %}
+
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">👤Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">📧 Email address</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+
+    <!-- Class 10th Marks -->
+    <h2 class="text-center my-5">📘 Enter your Class 10th Marks</h2>
+    <div class="form-group">
+      <label for="maths_10">Maths</label>
+      <input type="number" class="form-control" id="maths_10" name="maths_10" placeholder="Enter your marks">
+    </div>
+    <div class="form-group">
+      <label for="science_10">Science</label>
+      <input type="number" class="form-control" id="science_10" name="science_10" placeholder="Enter your marks">
+    </div>
+    <div class="form-group">
+      <label for="english_10">English</label>
+      <input type="number" class="form-control" id="english_10" name="english_10" placeholder="Enter your marks">
+    </div>
+    <div class="form-group">
+      <label for="social_science_10">Social Science</label>
+      <input type="number" class="form-control" id="social_science_10" name="social_science_10" placeholder="Enter your marks">
+    </div>
+    <div class="form-group">
+      <label for="hindi_10">Hindi</label>
+      <input type="number" class="form-control" id="hindi_10" name="hindi_10" placeholder="Enter your marks">
+    </div>
+    <div class="form-group">
+      <label for="pe_10">IT / Physical Education</label>
+      <input type="number" class="form-control" id="pe_10" name="pe_10" placeholder="Enter your marks">
+    </div>
+    <div class="form-group">
+      <label for="total_10">Total Marks (out of 500)</label>
+      <input type="number" class="form-control" id="total_10" name="total_10" placeholder="Enter total marks">
+    </div>
+
+    <!-- Class 12th Marks -->
+    <h2 class="text-center my-5">📗 Enter your Class 12th Marks</h2>
+    <div class="form-group">
+      <label for="maths_12">Mathematics</label>
+      <input type="number" class="form-control" id="maths_12" name="maths_12" placeholder="Enter your marks">
+    </div>
+    <div class="form-group">
+      <label for="physics_12">Physics</label>
+      <input type="number" class="form-control" id="physics_12" name="physics_12" placeholder="Enter your marks">
+    </div>
+    <div class="form-group">
+      <label for="chemistry_12">Chemistry</label>
+      <input type="number" class="form-control" id="chemistry_12" name="chemistry_12" placeholder="Enter your marks">
+    </div>
+    <div class="form-group">
+      <label for="english_12">English</label>
+      <input type="number" class="form-control" id="english_12" name="english_12" placeholder="Enter your marks">
+    </div>
+    <div class="form-group">
+      <label for="pe_12">Computer Science / Physical Education</label>
+      <input type="number" class="form-control" id="pe_12" name="pe_12" placeholder="Enter your marks">
+    </div>
+    <div class="form-group">
+      <label for="total_12">Total Marks (out of 500)</label>
+      <input type="number" class="form-control" id="total_12" name="total_12" placeholder="Enter total marks">
+    </div>
+
+    <!-- Submit -->
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-success btn-lg px-5">✅ Submit</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

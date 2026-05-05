@@ -1,0 +1,15 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Upload Receipt{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+  <h3>Please upload your fee receipt below 🧾:</h3>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}   <!-- Django auto-renders all fields -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

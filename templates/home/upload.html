@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Upload Receipt{% endblock %}
+
+{% block body %}
+<h3>Please upload your fee receipt below 🧾:</h3>
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <div class="mb-3">
+    <label class="form-label">Student Name</label>
+    <input class="form-control" type="text" name="student_name" placeholder="Enter student name" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Message (optional)</label>
+    <textarea class="form-control" name="message" rows="3" placeholder="Any notes..."></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="formFile" class="form-label">Upload Receipt</label>
+    <input class="form-control" type="file" id="formFile" name="receipt_image" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
