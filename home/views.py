@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login as auth_login, logout as aut
 
 from django.db import IntegrityError
 from .models import UserMessage
-@@from django.conf import settings
+from django.conf import settings
 
 from django.contrib import messages
 # from datetime import datetime
@@ -286,11 +286,11 @@ def send_otp(request):
         otp = str(random.randint(1000, 9999))
 
         try:
-                    client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
+            client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
 
             client.messages.create(
                 body=f"Your login OTP is {otp}",
-                        from_=settings.TWILIO_PHONE_NUMBER,   # 👈 Your Twilio phone number
+            from_=settings.TWILIO_PHONE_NUMBER,   # 👈 Your Twilio phone number
                 to=phone              # 👈 Must include +91 or country code
             )
 
