@@ -40,7 +40,3 @@ The system integrates OTP-based authentication using Twilio along with tradition
 - Media Handling: Django Media Files
 
 ---
-
-## System Architecture
-
-### High-Level Architecture
