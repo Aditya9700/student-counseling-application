@@ -1,9 +1,12 @@
 # Students Counseling Web Application
 
 ## Overview
+Live Deployment: https://student-counseling-application.vercel.app/
+
 This project is a full-stack web application built using Django that allows students to submit academic details, view rankings, receive messages from administrators, and upload documents. It also includes a custom-built admin panel for managing users, messages, and student data.
 
 The system integrates OTP-based authentication using Twilio along with traditional password-based login, providing flexibility in user authentication.
+
 
 ---
 
